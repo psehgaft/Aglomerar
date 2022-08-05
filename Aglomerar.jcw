@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>Aglomerar</label>
+	</settings>
+	<users>
+		<user>
+			<path>Aglomerar.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>Aglomerar.jcp</path>
+		</project>
+	</projects>
+</workspace>

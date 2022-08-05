@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro titulo="MiLibro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/Eric/Desktop/Cuatrimestre%20primavera%202011/servicios%20avanzados%20de%20internet/practica%2011/1/libro.xsd">
+	<autores>
+		<autor nombre="nombre1" apellido="apellido1"/>
+		<autor nombre="nombre2" apellido="apellido2"/>
+	</autores>
+	<secciones>
+		<seccion titulo="seccion1">
+			<capitulo titulo="capitulo1">
+				<parrafo>Contenido parrafo uno</parrafo>
+			</capitulo>
+		</seccion>
+		
+		<seccion titulo="seccion2">
+			<capitulo titulo="capitulo1">
+				<parrafo></parrafo>
+			</capitulo>
+			<capitulo titulo="capitulo2">
+				<parrafo></parrafo>
+			</capitulo>
+		</seccion>
+		
+	</secciones>
+	
+</libro>
