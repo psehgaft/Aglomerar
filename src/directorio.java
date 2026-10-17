@@ -24,9 +24,24 @@ import javax.xml.transform.*;
      void adjuntar( ) {  
          
        try {  
-            File dir = new File("C:\\Users\\Eric\\Documents\\JCreator Pro\\MyProjects\\Aglomerar\\classes\\archivosXML");
-    String[] files = dir.list();
-    String cad = "C:\\Users\\Eric\\Documents\\JCreator Pro\\MyProjects\\Aglomerar\\classes\\archivosXML\\";
+            // Carpeta de entrada: se busca primero ./archivosXML y despues
+            // classes/archivosXML (la carpeta de ejemplo versionada en el repo).
+            // Antes estaba una ruta absoluta de Windows que solo existia en la maquina del autor.
+            File dir = new File("archivosXML");
+            if (!dir.isDirectory()) {
+                dir = new File("classes" + File.separator + "archivosXML");
+            }
+            if (!dir.isDirectory()) {
+                System.out.println("No se encontro la carpeta 'archivosXML' ni 'classes/archivosXML'.");
+                System.out.println("Crea una carpeta 'archivosXML' con los documentos XML a aglomerar e intenta de nuevo.");
+                return;
+            }
+            String[] files = dir.list();
+            if (files == null || files.length == 0) {
+                System.out.println("La carpeta '" + dir.getPath() + "' no contiene archivos XML.");
+                return;
+            }
+            String cad = dir.getPath() + File.separator;
    
         // Creamos el parseador  
           DOMParser parser = new DOMParser();  
